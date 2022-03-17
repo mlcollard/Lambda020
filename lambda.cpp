@@ -124,7 +124,7 @@ int main(int argc, char* argv[]) {
 
     // pass static method of a class
     {
-        std::function<int(int)> f;
+        std::function<int(int)> f = Application::applyApplication;
 
         if (f) {
 
