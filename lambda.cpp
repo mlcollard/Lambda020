@@ -136,7 +136,7 @@ int main(int argc, char* argv[]) {
     {
         Application application;
 
-        std::function<int(int)> f;
+        std::function<int(int)> f = std::bind(&Application::apply, application, std::placeholders::_1);
 
         if (f) {
 
