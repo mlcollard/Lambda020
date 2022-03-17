@@ -32,7 +32,7 @@ int main(int argc, char* argv[]) {
 
     // function
     {
-        std::function<int(int)> f;
+        std::function<int(int)> f = add2;
 
         if (f) {
 
