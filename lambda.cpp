@@ -95,7 +95,10 @@ int main(int argc, char* argv[]) {
     // capture the number of times the function is executed
     {
         int numrun = 0;
-        std::function<int(int)> f;
+        std::function<int(int)> f = [&numrun](int n) {
+            ++numrun;
+            return n + 2;
+        };
 
         if (f) {
 
