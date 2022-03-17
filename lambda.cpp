@@ -82,7 +82,9 @@ int main(int argc, char* argv[]) {
     // non-const variable capture value
     {
         int incr = 2;
-        std::function<int(int)> f;
+        std::function<int(int)> f = [incr](int n) {
+            return n + incr;
+        };
 
         if (f) {
 
