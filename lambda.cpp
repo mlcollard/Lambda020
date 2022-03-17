@@ -69,7 +69,9 @@ int main(int argc, char* argv[]) {
     {
         int size = 2;
         const int INCR = size;
-        std::function<int(int)> f;
+        std::function<int(int)> f = [INCR](int n) {
+            return n + INCR;
+        };
 
         if (f) {
 
