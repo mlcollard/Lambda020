@@ -55,7 +55,9 @@ int main(int argc, char* argv[]) {
     // const variable capture reference
     {
         const int INCR = 2;
-        std::function<int(int)> f;
+        std::function<int(int)> f = [](int n) {
+            return n + INCR;
+        };
 
         if (f) {
 
