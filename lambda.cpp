@@ -42,7 +42,9 @@ int main(int argc, char* argv[]) {
 
     // empty capture
     {
-        std::function<int(int)> f;
+        std::function<int(int)> f = [](int n) {
+            return n + 2;
+        };
 
         if (f) {
 
