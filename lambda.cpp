@@ -110,7 +110,11 @@ int main(int argc, char* argv[]) {
     {
         std::istringstream input("2");
 
-        std::function<int(int)> f;
+        std::function<int(int)> f = [&input](int n) {
+            int incr;
+            input >> incr;
+            return n + incr;
+        };
 
         if (f) {
 
